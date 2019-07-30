@@ -1,0 +1,51 @@
+{
+  "name": "mysmis",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "homepage": "https://mysmis.herokuapp.com/",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"yarn client\"",
+    "client": "cd client && yarn start",
+    "install": "cd client && yarn",
+    "build": "cd client && yarn build",
+    "heroku-postbuild": "yarn build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.6.0",
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "ajax": "^0.0.4",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
+    "concurrently": "^3.6.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "eslint-plugin-security": "^1.4.0",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "git": "^0.1.5",
+    "global": "^4.3.2",
+    "if-env": "^1.0.4",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
+    "popper.js": "^1.14.7",
+    "prerender": "^5.6.0",
+    "prerender-node": "^3.2.1",
+    "query-string": "^6.5.0",
+    "quickemailverification": "^1.0.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-gtm-module": "^2.0.4",
+    "sequelize": "^5.8.12",
+    "serve": "^11.0.2",
+    "sudo": "^1.0.3"
+  }
+}
